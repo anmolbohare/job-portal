@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useAuth, useUser } from "@clerk/clerk-react";
-import { jobsData } from "../assets/assets";
+// import { jobsData } from "../assets/assets";
 
 export const AppContext = createContext()
 
@@ -20,8 +20,8 @@ export const AppContextProvider = (props) => {
 
     const [isSearched, setIsSearched] = useState(false)
 
-    // const [jobs, setJobs] = useState([])
-     const [jobs, setJobs] = useState(jobsData)
+    const [jobs, setJobs] = useState([])
+    //  const [jobs, setJobs] = useState(jobsData)
 
     const [showRecruiterLogin, setShowRecruiterLogin] = useState(false)
 
@@ -107,7 +107,7 @@ export const AppContextProvider = (props) => {
 
     // Retrive Company Token From LocalStorage
     useEffect(() => {
-        // fetchJobs()
+        fetchJobs()
 
         const storedCompanyToken = localStorage.getItem('companyToken')
 

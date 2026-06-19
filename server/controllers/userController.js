@@ -4,6 +4,7 @@ import User from "../models/User.js"
 import { v2 as cloudinary } from "cloudinary"
 
 // Get User Data
+// Get User Data
 export const getUserData = async (req, res) => {
 
     const userId = req.auth.userId
