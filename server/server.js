@@ -20,7 +20,17 @@ connectDB()
 await connectCloudinary()
 
 // Middlewares
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://job-portal-client-kappa-indol.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+app.options("*", cors());
 app.use(express.json())
 app.use(clerkMiddleware())
 
