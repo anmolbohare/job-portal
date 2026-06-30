@@ -48,6 +48,28 @@ export const AppContextProvider = (props) => {
         }
     }
 
+//     const fetchJobs = async () => {
+//     try {
+
+//         console.log("Backend URL:", backendUrl);
+
+//         const { data } = await axios.get(backendUrl + '/api/jobs');
+
+//         console.log("API Response:", data);
+
+//         if (data.success) {
+//             setJobs(data.jobs);
+//             console.log("Jobs:", data.jobs);
+//         } else {
+//             toast.error(data.message);
+//         }
+
+//     } catch (error) {
+//         console.log(error);
+//         toast.error(error.message);
+//     }
+// }
+
     // Function to Fetch Company Data
     const fetchCompanyData = async () => {
         try {
